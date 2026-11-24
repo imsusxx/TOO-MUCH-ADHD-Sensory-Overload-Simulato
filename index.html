@@ -1,82 +1,8 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="An interactive ADHD sensory overload simulator." />
-    <title>TOO MUCH! — Sensory Overload Simulator</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="state-calm">
-    <main class="app-shell">
-      <header class="topbar">
-        <p class="eyebrow"><span></span> sensory sensitivity study</p>
-        <button class="reset-button" id="resetButton" type="button">reset inputs <span>↺</span></button>
-      </header>
-
-      <section class="hero" aria-labelledby="pageTitle">
-        <div class="hero-copy">
-          <p class="kicker">an interactive reflection</p>
-          <h1 id="pageTitle">TOO<br /><em>MUCH!</em></h1>
-          <p class="intro">A small simulation of how everyday sensations can stack up. Adjust the inputs and watch the inner flame respond.</p>
-          <p class="note">This is not a diagnostic tool — just a way to make an invisible experience more visible.</p>
-        </div>
-
-        <div class="flame-stage" aria-live="polite" aria-label="Current sensory state visualisation">
-          <div class="rings" aria-hidden="true"></div>
-          <div class="flame" id="flame" aria-hidden="true">
-            <div class="flame-glow"></div>
-            <div class="flame-outer"></div>
-            <div class="flame-mid"></div>
-            <div class="flame-core"></div>
-          </div>
-          <div class="state-readout">
-            <span class="state-dot"></span>
-            <span id="stateLabel">CALM</span>
-          </div>
-          <p class="state-description" id="stateDescription">Plenty of room to breathe.</p>
-        </div>
-      </section>
-
-      <section class="controls-panel" aria-label="Sensory inputs">
-        <div class="noise-control control-block">
-          <div class="control-heading">
-            <div>
-              <p class="control-number">01 / sound</p>
-              <h2>Background noise</h2>
-            </div>
-            <output id="noiseValue" for="noiseSlider">quiet</output>
-          </div>
-          <input id="noiseSlider" class="noise-slider" type="range" min="0" max="100" value="15" aria-label="Background noise level" />
-          <div class="range-labels"><span>soft</span><span>busy</span><span>loud</span></div>
-        </div>
-
-        <div class="comfort-control control-block">
-          <div class="control-heading">
-            <div>
-              <p class="control-number">02 / body</p>
-              <h2>Physical discomforts</h2>
-            </div>
-            <p class="selected-count" id="selectedCount">0 selected</p>
-          </div>
-          <div class="checkboxes">
-            <label class="check-card"><input type="checkbox" value="hat" /><span class="fake-check"></span><span class="card-icon">⌒</span><span>Wearing a hat</span></label>
-            <label class="check-card"><input type="checkbox" value="tag" /><span class="fake-check"></span><span class="card-icon">⌁</span><span>Clothing tags</span></label>
-            <label class="check-card"><input type="checkbox" value="collar" /><span class="fake-check"></span><span class="card-icon">◌</span><span>Tight collars</span></label>
-          </div>
-        </div>
-
-        <div class="meter-block" aria-label="Sensory load meter">
-          <div class="meter-label"><span>sensory load</span><span id="scoreValue">15 / 160</span></div>
-          <div class="meter-track"><div class="meter-fill" id="meterFill"></div></div>
-          <div class="meter-scale"><span>calm</span><span>uncomfortable</span><span>overloaded</span></div>
-        </div>
-      </section>
-      <footer>made with care for the moments when everything arrives at once</footer>
-    </main>
-    <script src="script.js"></script>
-  </body>
-</html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="An interactive ADHD sensory overload simulator." /><title>TOO MUCH! — Sensory Overload Simulator</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" /><link rel="stylesheet" href="styles.css" /></head>
+<body class="state-calm"><main class="app-shell"><header class="topbar"><p class="eyebrow"><span></span> sensory sensitivity study</p><button class="reset-button" id="resetButton" type="button">reset inputs <span>↺</span></button></header>
+<section class="hero" aria-labelledby="pageTitle"><div class="hero-copy"><p class="kicker">an interactive reflection</p><h1 id="pageTitle">TOO<br /><em>MUCH!</em></h1><p class="intro">Every layer can feel like one layer too many. Add clothing pieces and sound, then watch the flame tell the story.</p><p class="note">This is not a diagnostic tool — just a way to make an invisible experience more visible.</p></div>
+<div class="flame-stage" aria-live="polite" aria-label="Current sensory state visualisation"><div class="rings" aria-hidden="true"></div><div class="character-wrap" id="character"><div class="character-flames" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="character-head"><span></span><span></span><b></b></div><div class="character-neck"></div><div class="character-body"><div class="character-shirt"></div><div class="character-arm left"></div><div class="character-arm right"></div></div><div class="character-legs"><i></i><i></i></div></div><div class="state-readout"><span class="state-dot"></span><span id="stateLabel">CALM</span></div><p class="state-description" id="stateDescription">Plenty of room to breathe.</p><p class="threshold-readout" id="thresholdReadout">WARDROBE THRESHOLD 0 / 5</p></div></section>
+<section class="controls-panel" aria-label="Sensory inputs"><div class="noise-control control-block"><div class="control-heading"><div><p class="control-number">01 / sound</p><h2>Background noise</h2></div><output id="noiseValue" for="noiseSlider">quiet</output></div><input id="noiseSlider" class="noise-slider" type="range" min="0" max="100" value="15" aria-label="Background noise level" /><div class="range-labels"><span>soft</span><span>busy</span><span>loud</span></div></div>
+<div class="comfort-control control-block"><div class="control-heading"><div><p class="control-number">02 / layers</p><h2>Try on the pieces</h2></div><p class="selected-count" id="selectedCount">0 / 5 worn</p></div><p class="puzzle-help">Each piece adds a layer. At five, the character reaches their limit.</p><div class="clothing-pieces"><label class="puzzle-piece hat"><input type="checkbox" value="wool-hat" /><span class="piece-icon">⌒</span><span>Wool hat</span></label><label class="puzzle-piece neck"><input type="checkbox" value="turtleneck" /><span class="piece-icon">◉</span><span>Turtleneck</span></label><label class="puzzle-piece jewelry"><input type="checkbox" value="jewelry" /><span class="piece-icon">✦</span><span>Jewelry</span></label><label class="puzzle-piece gloves"><input type="checkbox" value="gloves" /><span class="piece-icon">⌂</span><span>Gloves</span></label><label class="puzzle-piece scarf"><input type="checkbox" value="scarf" /><span class="piece-icon">〰</span><span>Scarf</span></label></div></div>
+<div class="meter-block" aria-label="Sensory load meter"><div class="meter-label"><span>sensory load</span><span id="scoreValue">15 / 175</span></div><div class="meter-track"><div class="meter-fill" id="meterFill"></div></div><div class="meter-scale"><span>calm</span><span>uncomfortable</span><span>overloaded</span></div><p class="combination-note" id="combinationNote" aria-live="polite"></p></div></section><footer>made with care for the moments when everything arrives at once</footer></main><script src="script.js"></script></body></html>
